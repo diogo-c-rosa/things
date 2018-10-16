@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D94061C2216F89F700771CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94061C1216F89F700771CC1 /* AppDelegate.swift */; };
-		D94061C4216F89F700771CC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94061C3216F89F700771CC1 /* ViewController.swift */; };
 		D94061C7216F89F700771CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94061C5216F89F700771CC1 /* Main.storyboard */; };
 		D94061CA216F89F700771CC1 /* things.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D94061C8216F89F700771CC1 /* things.xcdatamodeld */; };
 		D94061CC216F89FA00771CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94061CB216F89FA00771CC1 /* Assets.xcassets */; };
 		D94061CF216F89FA00771CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94061CD216F89FA00771CC1 /* LaunchScreen.storyboard */; };
 		D94061DA216F89FA00771CC1 /* thingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94061D9216F89FA00771CC1 /* thingsTests.swift */; };
 		D94061E5216F89FA00771CC1 /* thingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94061E4216F89FA00771CC1 /* thingsUITests.swift */; };
+		D9A165462174C45400E08539 /* ThingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A165452174C45400E08539 /* ThingsTableViewController.swift */; };
+		D9A16548217628A900E08539 /* NewThingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A16547217628A900E08539 /* NewThingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		D94061BE216F89F700771CC1 /* things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = things.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94061C1216F89F700771CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D94061C3216F89F700771CC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D94061C6216F89F700771CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D94061C9216F89F700771CC1 /* things.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = things.xcdatamodel; sourceTree = "<group>"; };
 		D94061CB216F89FA00771CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		D94061E0216F89FA00771CC1 /* thingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94061E4216F89FA00771CC1 /* thingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thingsUITests.swift; sourceTree = "<group>"; };
 		D94061E6216F89FA00771CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9A165452174C45400E08539 /* ThingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsTableViewController.swift; sourceTree = "<group>"; };
+		D9A16547217628A900E08539 /* NewThingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewThingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				D94061C1216F89F700771CC1 /* AppDelegate.swift */,
-				D94061C3216F89F700771CC1 /* ViewController.swift */,
 				D94061C5216F89F700771CC1 /* Main.storyboard */,
 				D94061CB216F89FA00771CC1 /* Assets.xcassets */,
 				D94061CD216F89FA00771CC1 /* LaunchScreen.storyboard */,
 				D94061D0216F89FA00771CC1 /* Info.plist */,
 				D94061C8216F89F700771CC1 /* things.xcdatamodeld */,
+				D9A165452174C45400E08539 /* ThingsTableViewController.swift */,
+				D9A16547217628A900E08539 /* NewThingTableViewController.swift */,
 			);
 			path = things;
 			sourceTree = "<group>";
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D94061C4216F89F700771CC1 /* ViewController.swift in Sources */,
 				D94061CA216F89F700771CC1 /* things.xcdatamodeld in Sources */,
+				D9A16548217628A900E08539 /* NewThingTableViewController.swift in Sources */,
+				D9A165462174C45400E08539 /* ThingsTableViewController.swift in Sources */,
 				D94061C2216F89F700771CC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
