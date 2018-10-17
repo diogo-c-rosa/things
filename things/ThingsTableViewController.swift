@@ -10,6 +10,9 @@ import UIKit
 
 class ThingsTableViewController: UITableViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var things: [Thing] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,27 +23,40 @@ class ThingsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+        tableView.reloadData()
+    }
+    
+    func getData() {
+        do {
+            things = try context.fetch(Thing.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return things.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
 
-        // Configure the cell...
+        let thing = things[indexPath.row]
+        
+        if let name = thing.name {
+            cell.textLabel?.text = name
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
