@@ -46,6 +46,22 @@ class ThingsTableViewController: UITableViewController {
         return things.count
     }
 
+    func age(_ startDate: Date?, _ endDate: Date?) -> String? {
+        guard let startDate = startDate else {
+            return ""
+        }
+        
+        let form = DateComponentsFormatter()
+        form.maximumUnitCount = 2
+        form.unitsStyle = .full
+        form.allowedUnits = [.year, .month, .day]
+        
+        guard let endDate = endDate else {
+            return form.string(from: startDate, to: Date())
+        }
+        return form.string(from: startDate, to: endDate)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
 
@@ -53,6 +69,10 @@ class ThingsTableViewController: UITableViewController {
         
         if let name = thing.name {
             cell.textLabel?.text = name
+            cell.detailTextLabel?.text = age(thing.start, thing.end)
+            if thing.end != nil {
+                cell.detailTextLabel?.textColor = UIColor.red
+            }
         }
 
         return cell

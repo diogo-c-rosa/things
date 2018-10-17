@@ -27,6 +27,8 @@ class NewThingTableViewController: UITableViewController {
     @IBOutlet weak var store: UITextField!
     @IBOutlet weak var notify: UISwitch!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
