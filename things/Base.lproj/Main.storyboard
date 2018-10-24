@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" translucent="NO" id="UhW-T9-3bn">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="iNa-cT-eW3">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="BPQ-Lp-WmX" id="cpX-xt-7qm"/>
+                                <outlet property="delegate" destination="BPQ-Lp-WmX" id="nVn-pm-Lff"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -63,17 +63,26 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="wr7-TV-fKd" id="dNv-iR-wsN"/>
+                        <outlet property="searchBar" destination="iNa-cT-eW3" id="MCj-2E-wOd"/>
+                        <outlet property="searchDisplayController" destination="L3x-1N-eQf" id="yDF-XF-Cvi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kro-lL-ePT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="wr7-TV-fKd">
                     <connections>
                         <outlet property="delegate" destination="BPQ-Lp-WmX" id="M3c-NL-qGB"/>
-                        <outlet property="searchBar" destination="UhW-T9-3bn" id="oha-Rm-HKy"/>
                         <outlet property="searchContentsController" destination="BPQ-Lp-WmX" id="qgt-ty-2NJ"/>
                         <outlet property="searchResultsDataSource" destination="BPQ-Lp-WmX" id="cZU-ji-nPL"/>
                         <outlet property="searchResultsDelegate" destination="BPQ-Lp-WmX" id="1me-bk-KP5"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="L3x-1N-eQf">
+                    <connections>
+                        <outlet property="delegate" destination="BPQ-Lp-WmX" id="Akt-OQ-WM1"/>
+                        <outlet property="searchBar" destination="iNa-cT-eW3" id="Co0-rC-cwd"/>
+                        <outlet property="searchContentsController" destination="BPQ-Lp-WmX" id="Pr4-iB-eS6"/>
+                        <outlet property="searchResultsDataSource" destination="BPQ-Lp-WmX" id="R4c-8G-JaP"/>
+                        <outlet property="searchResultsDelegate" destination="BPQ-Lp-WmX" id="34Q-YU-HXh"/>
                     </connections>
                 </searchDisplayController>
             </objects>
